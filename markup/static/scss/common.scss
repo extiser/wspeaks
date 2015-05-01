@@ -1,0 +1,62 @@
+// Common styles of the project
+
+html,
+body {
+	height: 100%;
+
+	background: #e0e0e0 url(../img/general/bg.png);
+
+	font-family: "Arial";
+	font-size: $base-font-size;
+}
+
+.page {
+	position: relative;
+
+	padding: 20px;
+
+	background: #fff;
+	&__wrapper {
+		width: 1004px;
+		min-height: 100%;
+		margin: auto;
+		@media screen and (max-width:480px) {
+			width: 100%;
+		}
+	}
+}
+
+* html .page__wrapper {
+	height: 100%;
+}
+
+.sidebar {
+	display: inline-block;
+
+	width: 207px;
+	margin-right: 35px;
+
+	vertical-align: top;
+
+	@media screen and (max-width:480px) {
+		display: block;
+		width: 100%;
+	}
+}
+
+.content {
+	display: inline-block;
+
+	width: 716px;
+	margin-top: 10px;
+
+	vertical-align: top;
+	@media screen and (max-width:480px) {
+		display: block;
+		width: 100%;
+	}
+}
+
+img {
+	border-radius: 3px;
+}

@@ -1,0 +1,93 @@
+// Mixins.
+
+@mixin nl {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    list-style-position: outside;
+
+    text-indent: 0;
+}
+
+@mixin cf {
+    &:before,
+    &:after {
+        display: table;
+
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
+    .lt-ie8 & {
+        zoom: 1;
+    }
+}
+
+@mixin blocks-justify {
+    text-align: justify;
+    text-justify: newspaper;
+}
+
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+
+@mixin content {
+    position: absolute;
+
+    display: block;
+
+    content: "";
+}
+
+@mixin img-animate {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    transition: all .8s ease-in-out;
+}
+
+@mixin img-animate-param {
+    top: -5%;
+    left: -5%;
+
+    width: 110%;
+    height: auto;
+
+    transform: rotate(3deg);
+
+    filter: grayscale(100%);
+}
+
+@mixin black-link {
+    transition: all .4s ease-in-out;
+
+    color: #333;
+    border-bottom: 1px solid $orange-light;
+    &:hover {
+        color: $orange;
+        border-bottom-color: $orange;
+    }
+}
+
+@mixin gray-button {
+    transition: all .4s ease-in-out;
+
+    color: #666;
+    border: 1px solid #d1d1d1;
+    background: linear-gradient(to bottom, #fcfcfc, #f0f0f0);
+
+    font-size: em(14px);
+    &:hover {
+        color: #fff;
+        border-color: $orange-light;
+        background: $orange;
+    }
+}
+// You can add your own mixins here:

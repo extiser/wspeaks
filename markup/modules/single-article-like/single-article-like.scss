@@ -1,0 +1,23 @@
+.single-article-like {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+
+	background: url(../img/general/dotted.png) repeat-x center bottom;
+	&__text {
+		display: inline-block;
+
+		margin-right: 15px;
+
+		vertical-align: middle;
+
+		color: #000;
+
+		font-size: em(14px);
+		font-weight: 700;
+	}
+	&__likes {
+		display: inline-block;
+
+		vertical-align: middle;
+	}
+}

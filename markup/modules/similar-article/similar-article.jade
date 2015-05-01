@@ -1,0 +1,10 @@
+mixin similar-article()
+	.similar-article-list
+		.title Похожие статьи
+		- for (var i = 1; i < 4; ++i) {
+		.similar-article
+			.similar-article__img
+				img(src="%=staticPrefix=%img/content/similar-article#{i}.jpg" alt="")
+			a(href="#" title="Коллекции Haute Couture весна-лето 2013. Часть 1").similar-article__link Коллекции Haute Couture весна-лето 2013. Часть 1
+			p.similar-article__description Потрясающе нежный, свежий, теплый, многогранный коралловый цвет сделает ваше торжество
+		- }

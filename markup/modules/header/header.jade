@@ -1,0 +1,9 @@
+mixin header(data)
+	header.header
+		.page__wrapper
+			a(href="#{data.href}" title="#{data.title}").header__logo
+			.header__search
+				form(action="" method="").form
+					label.form__icon.form__icon--search
+						input(type="search" value="" placeholder="Что ищем?").form__element.form__element--search
+					input(type="submit" value="Найти").form__submit.form__submit--gray

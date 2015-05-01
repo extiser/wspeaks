@@ -1,0 +1,42 @@
+.sidebar-nav {
+	border-right: 1px solid #efefef;
+	background: linear-gradient(to right, #fff 0%, #fafafa 100%);
+	&__container {
+		margin: 0;
+		padding: 0;
+		padding-right: 1em;
+
+		border-right: 1px solid #fff;
+		background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0) 100%);
+	}
+	&__item {
+		position: relative;
+		left: -10px;
+
+		padding-top: 10px;
+		padding-bottom: 8px;
+		padding-left: 33px;
+
+		list-style: none;
+		&.active {
+			background: $orange-light;
+			a {
+				border-bottom: 0;
+			}
+		}
+		&:before {
+			top: 13px;
+			left: 10px;
+
+			@include content;
+			@include bg($icon-circle-arrow);
+		}
+		a {
+			font-size: em(15px);
+			line-height: em(18px);
+
+			@include black-link;
+			border-bottom: 1px dotted $orange;
+		}
+	}
+}

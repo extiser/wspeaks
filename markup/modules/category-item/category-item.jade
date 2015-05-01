@@ -1,0 +1,12 @@
+mixin category-item()
+	.category-item-list
+		- for (var i = 1; i < 8; ++i) {
+		.category-item
+			.category-item__img
+				img(src="%=staticPrefix=%img/content/category-item#{i}.jpg" alt="")
+			.category-item__content
+				a(href="#" title="Коллекции Haute Couture весна-лето 2013. Часть 1").category-item__link Коллекции Haute Couture весна-лето 2013. Часть 1
+				p.category-item__description В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+		- }
+
+		a(href="#" title="").load-more Показать еще

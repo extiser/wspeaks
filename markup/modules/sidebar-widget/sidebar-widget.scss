@@ -1,0 +1,6 @@
+.sidebar-widget {
+	margin-top: 30px;
+	@media screen and (max-width:480px) {
+		display: none;
+	}
+}

@@ -1,0 +1,39 @@
+.breadcrumbs {
+	@media screen and (max-width:480px) {
+		display: none;
+	}
+	&__link {
+		position: relative;
+
+		display: inline-block;
+
+		margin-right: 10px;
+		padding-left: 15px;
+
+		color: #91918f;
+
+		font-size: em(13px);
+		&:hover {
+			text-decoration: underline;
+		}
+		&:before {
+			top: 5px;
+			left: 0;
+
+			@include bg($icon-arrow-right);
+			@include content;
+		}
+		&--home {
+			&:before {
+				top: 3px;
+
+				@include bg($icon-home);
+			}
+		}
+		&--current {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,77 @@
+.big-article {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+
+	background: url(../img/general/dotted.png) repeat-x center bottom;
+	@media screen and (max-width:480px) {
+		margin-top: 15px;
+	}
+	&__img {
+		position: relative;
+
+		display: inline-block;
+		overflow: hidden;
+
+		width: 470px;
+		height: 303px;
+
+		text-align: center;
+		vertical-align: middle;
+		@media screen and (max-width:480px) {
+			width: 100%;
+			height: auto;
+		}
+		img {
+			@include img-animate;
+			@media screen and (max-width:480px) {
+				position: relative;
+			}
+		}
+	}
+	&:hover {
+		img {
+			@include img-animate-param;
+		}
+	}
+	&__content {
+		display: inline-block;
+
+		width: 180px;
+		margin-left: 20px;
+
+		vertical-align: middle;
+		@media screen and (max-width:480px) {
+			display: block;
+			width: 100%;
+			margin: auto;
+		}
+		&__link {
+			@include black-link;
+
+			font-size: 26px;
+		}
+		.category-tag--big-article {
+			margin-bottom: 10px;
+		}
+		&__description {
+			color: #333;
+
+			font-size: em(14px);
+			line-height: em(18px, 14px);
+		}
+	}
+
+}
+
+.lt-ie9 {
+	.big-article {
+		&:hover {
+			img {
+				top: 0;
+				left: 0;
+
+				width: 100%;
+			}
+		}
+	}
+}

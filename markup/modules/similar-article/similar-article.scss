@@ -1,0 +1,52 @@
+.similar-article {
+	display: inline-block;
+
+	box-sizing: border-box;
+	width: 240px;
+	margin-top: 10px;
+	margin-left: -5px;
+	padding: 24px 27px;
+
+	background: #efefed;
+	@media screen and (max-width:480px) {
+		display: block;
+		margin: 10px auto;
+	}
+	&:first-child,
+	&:last-child {
+		background: #f6f6f5;
+	}
+	&:hover {
+		.similar-article__img {
+			img {
+				@include img-animate-param;
+			}
+		}
+	}
+	&__img {
+		position: relative;
+
+		overflow: hidden;
+
+		width: 190px;
+		height: 124px;
+		margin-bottom: 12px;
+		img {
+			@include img-animate;
+		}
+	}
+	&__link {
+		font-size: em(14px);
+		font-weight: 700;
+		line-height: em(21px, 14px);
+
+		@include black-link;
+	}
+	&__description {
+		margin: 0;
+		margin-top: 8px;
+
+		font-size: em(12px);
+		line-height: em(18px, 12px);
+	}
+}

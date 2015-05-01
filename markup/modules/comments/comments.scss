@@ -1,0 +1,10 @@
+.comments {
+	margin-top: 40px;
+	&__script {
+		margin-top: 10px;
+		@media screen and (max-width:480px) {
+			width: 100%;
+			overflow-x: hidden;
+		}
+	}
+}

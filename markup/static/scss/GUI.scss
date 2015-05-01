@@ -1,0 +1,96 @@
+// forms
+.form {
+	&__element {
+		box-sizing: border-box;
+		height: 35px;
+		padding: 0 10px;
+
+		transition: all .2s ease-in-out;
+
+		border: 1px solid #e8e8e8;
+		border-radius: 3px;
+
+		font-size: em(14px);
+		&--search {
+			width: 630px;
+			padding-left: 30px;
+
+			-webkit-appearance: none;
+
+			@media screen and (max-width:480px) {
+				width: 100%;
+			}
+		}
+		&:focus {
+			outline: none;
+			box-shadow: inset 0 0 10px $gray;
+		}
+	}
+	&__submit {
+		height: 35px;
+		padding: 0 20px;
+
+		border-radius: 3px;
+		outline: none;
+		&--gray {
+			@include gray-button;
+		}
+	}
+	&__icon {
+		position: relative;
+
+		display: inline-block;
+
+		vertical-align: top;
+		&:before {
+			@include content;
+		}
+		&--search {
+			&:before {
+				top: 10px;
+				left: 10px;
+
+				@include bg($icon-search);
+			}
+		}
+	}
+}
+
+
+// category tag in preview article
+.category-tag {
+	text-transform: uppercase;
+
+	color: $orange;
+
+	font-size: 10px;
+}
+
+// h1 in category & other pages
+.title {
+	padding-left: 13px;
+
+	color: #333;
+	border-left: 3px solid $orange;
+
+	font-size: em(23px);
+	font-weight: 700;
+}
+
+h2 {
+	color: $orange;
+	font-size: em(20px);
+	line-height: em(20px, 20px);
+}
+
+h3 {
+	color: $orange;
+	font-size: em(18px);
+	line-height: em(18px, 18px);
+}
+
+h4 {
+	color: $orange;
+	font-size: em(16px);
+	line-height: em(16px, 16px);
+}

@@ -1,0 +1,35 @@
+doctype html
+|<!--[if IE 7]><html class="ie7 lt-ie10 lt-ie9 lt-ie8 no-js" lang="ru"><![endif]-->
+|<!--[if IE 8]><html class="ie8 lt-ie10 lt-ie9 no-js" lang="ru"><![endif]-->
+|<!--[if IE 9 ]><html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
+|<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ru"><!--<![endif]-->
+
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/header/header
+include ../modules/nav-menu/nav-menu
+include ../modules/sidebar-nav/sidebar-nav
+include ../modules/sidebar-widget/sidebar-widget
+include ../modules/breadcrumbs/breadcrumbs
+include ../modules/category-item/category-item
+
+head
+	+head(head.defaults)
+body
+	+header(header.defaults)
+
+	+nav-menu()
+
+	.page__wrapper
+		main.page
+			aside.sidebar
+				+sidebar-nav()
+				+sidebar-widget()
+			section.content
+				+breadcrumbs()
+
+				h1.title Бренды и коллекции
+
+				+category-item()
+
+	+footer()
