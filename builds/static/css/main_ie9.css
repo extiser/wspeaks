@@ -384,6 +384,12 @@ h4 {
   font-size: 1em;
   line-height: 1em; }
 
+.hide {
+  display: none; }
+  @media screen and (max-width: 480px) {
+    .hide {
+      display: block; } }
+
 html, body {
   height: 100%;
   background: #e0e0e0 url(../img/general/bg.png);
